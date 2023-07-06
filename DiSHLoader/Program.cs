@@ -1,6 +1,6 @@
 ﻿using Microsoft.Win32;
 
-string keyPath = @"HKEY_CURRENT_USER\LDevs\DiSHLoader\";
+string keyPath = @"HKEY_CURRENT_USER\Software\LDevs\DiSHLoader\";
 string valueName = "LatestVersion";
 
 
