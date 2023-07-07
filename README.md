@@ -16,7 +16,7 @@ You'll need Visual Studio 2022 with the **.NET desktop development** workflow an
 DiSH Loader needs manual configuration for now. To have a working envoirnement, you need to:
 1. Create a folder in %appdata% with the following directory tree:
 ```
-Roaming
+%appdata%\Roaming
 └───LDevs
     └───DiSHLoader
         └───versions
