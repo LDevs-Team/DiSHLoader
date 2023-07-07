@@ -50,3 +50,31 @@ LOGS_ID=(your logs channel ID)
 GLOBAL_ID=(your global channel ID)
 ```
 
+## How this works
+
+> **Warning**
+> The following explaination is pretty technical, and is only used to better explain the badly-documented code in the projects
+
+### DiSHLoader
+> **Info**
+> TL;DR: the code is contained in Program.cs in the DiSHLoader folder. Its use is loading DiSH and making sure it does not crash
+
+- the `logMessages` function, logs messages from DiSHCore, used below.
+- The program gets the path to %appdata%
+- The program gets the basic keys: 
+  - the path to the .env file (with %appdata%\LDevs\DiSHLoader\\.env as default)
+  - the default version (required, no default)
+  - the path to the versions folder (with %appdata%\LDevs\DiSHLoader\versions as default)
+- The program loads the .env file specified by the registry key mentioned above
+- The program creates the start info for DiSH. It provides only the path to the executable. It is derived by: `[versions path]\[default version name]\DiSH.exe`
+- The program starts DiSH
+- The program waits for DiSH to exit and saves the exit codeto a variable
+- It then uses a switch to determine what caused DiSH to exit.
+  - Code 0: do nothing - DiSH probably exited on its own
+  - Code 2: restart the program - this is used by DiSH to indicate a change in the configuration (still not implemented) and therefore the requirement to restart th program with new configuration data
+  - Code 1: DiSH crashed. Start DiSHCore (see below)
+
+### DiSHCore
+
+> **Info**
+> TL;DR It works similarly to the main DiSH repo, which is better documented, check that one out for now
