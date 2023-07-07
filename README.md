@@ -56,7 +56,7 @@ GLOBAL_ID=(your global channel ID)
 > The following explaination is pretty technical, and is only used to better explain the badly-documented code in the projects
 
 ### DiSHLoader
-> **Info**
+> **Note**
 > TL;DR: the code is contained in Program.cs in the DiSHLoader folder. Its use is loading DiSH and making sure it does not crash
 
 - the `logMessages` function, logs messages from DiSHCore, used below.
@@ -76,5 +76,5 @@ GLOBAL_ID=(your global channel ID)
 
 ### DiSHCore
 
-> **Info**
+> **Note**
 > TL;DR It works similarly to the main DiSH repo, which is better documented, check that one out for now
