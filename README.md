@@ -2,7 +2,7 @@
 ## The new way of installing and loading DiSH
 
 ## Installation
-For now, precompiled releases are not available in alpha stage, but you can use releases from [actions](actions)
+For now, precompiled releases are not available in alpha stage, but you can use releases from [actions](https://github.com/LDevs-Team/DiSHLoader/actions)
 
 ### Building
 You'll need Visual Studio 2022 with the **.NET desktop development** workflow and git.
