@@ -48,6 +48,7 @@ GUILD_ID=(your discord server ID)
 CATEGORY_ID=(your category ID)
 LOGS_ID=(your logs channel ID)
 GLOBAL_ID=(your global channel ID)
+OWNER_IDS=ownerid1,ownerid2,ownerid3 (at least one must be specified. People specified in the owner IDs can use jishaku)
 ```
 
 ## How this works
