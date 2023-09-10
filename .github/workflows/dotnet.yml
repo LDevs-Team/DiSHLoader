@@ -23,6 +23,18 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
+      run: dotnet build -c Debug --no-restore
+    - name: Show debug tree
+      run: tree .
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        # Artifact name
+        name: DiSHLoader-Debug
+        path: ./DiSHLoader/bin/Debug/*
+    - name: Make it an EXE app for Release
+      run: (Get-Content -path DiSHLoader/DiSHLoader.csproj -Raw) -replace 'Exe','WinExe'
+    - name: Build
       run: dotnet build -c Release --no-restore
     - name: Show debug tree
       run: tree .
@@ -30,6 +42,5 @@ jobs:
       uses: actions/upload-artifact@v3.1.2
       with:
         # Artifact name
-        name: DiSHLoader
+        name: DiSHLoader-Release
         path: ./DiSHLoader/bin/Release/*
- 
