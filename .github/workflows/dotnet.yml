@@ -33,7 +33,7 @@ jobs:
         name: DiSHLoader-Debug
         path: ./DiSHLoader/bin/Debug/*
     - name: Make it an EXE app for Release
-      run: (Get-Content -path DiSHLoader/DiSHLoader.csproj -Raw) -replace 'Exe','WinExe'
+      run: ((Get-Content -path DiSHLoader/DiSHLoader.csproj -Raw) -replace 'Exe','WinExe') | Set-Content -Path DiSHLoader/DiSHLoader.csproj
     - name: Build
       run: dotnet build -c Release --no-restore
     - name: Show debug tree
