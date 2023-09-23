@@ -15,4 +15,16 @@
     <ProjectReference Include="..\DiSHCore\DiSHCore.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="manifest.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="delete.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="setup.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
