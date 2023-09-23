@@ -31,7 +31,7 @@ jobs:
       with:
         # Artifact name
         name: DiSHLoader-Debug
-        path: ./DiSHLoader/bin/Debug/net-7.0/*
+        path: ./DiSHLoader/bin/Debug/net7.0/*
     - name: Make it an EXE app for Release
       run: ((Get-Content -path DiSHLoader/DiSHLoader.csproj -Raw) -replace 'Exe','WinExe') | Set-Content -Path DiSHLoader/DiSHLoader.csproj
     - name: Build
@@ -43,4 +43,4 @@ jobs:
       with:
         # Artifact name
         name: DiSHLoader-Release
-        path: ./DiSHLoader/bin/Release/net-7.0/*
+        path: ./DiSHLoader/bin/Release/net7.0/*
