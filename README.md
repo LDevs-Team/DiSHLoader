@@ -81,4 +81,4 @@ OWNER_IDS=ownerid1,ownerid2,ownerid3 (at least one must be specified. People spe
 
 > **Note**
 >
-> TL;DR It works similarly to the main DiSH repo, which is better documented, check that one out for now
+> TL;DR It works similarly to the main DiSH repo, which is better documented, check that one out for now :)
