@@ -1,4 +1,6 @@
 # DiSHLoader
+# Important announcement
+DiSH (python) and DiSHLoader are reaching End Of Life (EOL). They are currently being replaced by [DiSH.cs](https://github.com/LDevs-Team/dish.cs), and will get discontinued and archived once the transition is done.
 ## The new way of installing and loading DiSH
 
 ## Installation
